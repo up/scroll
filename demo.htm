@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <title>Demo - HTML5 SmoothScroll</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://raw.github.com/scottjehl/Respond/master/respond.min.js"></script>
+  <![endif]-->
+  <style>
+	a#top {
+	  position: absolute;
+	  top: 0;
+	}
+	a.top {
+	  position: absolute;
+	  right: 20px;
+	  cursor: pointer;
+	}
+	a.top:hover,
+	a.top:focus {
+	  text-decoration: none;
+	}
+	a.top:before {
+	  content: "[";
+	}
+	a.top:after {
+	  content: "]";
+	}
+	nav {
+	  margin-bottom: 50px;
+	}
+	nav a {
+	  display: block;
+	}
+	article {
+	  border: 1px solid #aaa;
+	  background: #f8f8f8;
+	  margin-bottom: 1000px;
+	  padding: 12px;
+	  height: 500px;
+	}
+  </style>
+</head>
+<body>
+
+  <a id="top" name="top"></a>
+
+  <section>
+	
+	  <nav>
+		  <a href="#article1">Article 1</a>
+		  <a href="#article2">Article 2</a>
+		  <a href="#article3">Article 3</a>
+		</nav>
+
+
+    <a id="article1" name="article1"></a>
+    <article>
+	
+      <h3>article 1</h3>
+
+    </article>
+
+    <a id="article2" name="article2"></a>
+    <article>
+	
+      <h3>article 2</h3>
+
+    </article>
+    
+    <a id="article3" name="article3"></a>
+    <article>
+	
+      <h3>article 3</h3>
+
+    </article>
+      
+  </section>
+  
+  
+  <script src="scroll.min.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 /**
   * Smooth HTML5 Scroller
-  * Copyright (c) 2010 Uli Preuss
+  * Copyright (c) 2012 Uli Preuss
 */
 
 (function() {
@@ -93,5 +93,12 @@
     };
     articles[i].insertBefore(link, articles[i].firstChild);
   }
+  
+  var ival = setInterval(function(){
+    if(document.readyState === 'complete') {
+      smoothScroll(location.hash.split('#')[1]);
+      clearInterval(ival);      
+    }
+  }, 100);
 
 } ());
